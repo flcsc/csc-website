@@ -3,12 +3,8 @@ function Home() {
     <>
       <header>
         <div>
-          <a href="/">
-            <img class="home-button" src="logo1.png" />
-          </a>
-          <a href="https://tcdsb.elearningontario.ca/d2l/home/23924060">
-            D2L Page
-          </a>
+          <a href="/"><img className="home-button" src="logo5.png" /></a>
+          <a href="https://tcdsb.elearningontario.ca/d2l/home/23924060">D2L Page</a>
           <a href="/projects">Projects</a>
         </div>
       </header>
@@ -19,7 +15,7 @@ function Home() {
         </h2>
       </div>
       <footer>
-        <p>@flchs_csc</p>
+        <a href="https://github.com/flcsc/csc-website"><img src="gitHubLogo.png"></img></a>
       </footer>
     </>
   );

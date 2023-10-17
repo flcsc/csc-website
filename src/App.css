@@ -21,17 +21,20 @@ body{
   border: 0;
 
   width: 100%;
+  overflow-x: hidden;
   position: relative;
 
-  background-color: rgb(28, 70, 87);
+  background-color: rgb(5, 24, 32);
   color: white;
 }
 
 header{
   background-color: rgb(11, 43, 11);
   color: white;
-  height: 75px;
+
+  height: 2.5cm;
   width: 100%;
+
   position:fixed;
   z-index: 1;
   border-bottom: 10px solid rgb(31, 117, 31);
@@ -52,15 +55,29 @@ header a{
 
 header div{
   display: block;
-  position: absolute;
-  top: 50%;
-  height: 65px;
-  margin: -33px 0px;
+  margin: 0.2cm 0px;
+
 }
 
 footer{
   background-color: rgb(3, 10, 15);
-  height: 200px;
+  border-top: 0.2cm solid rgb(1, 6, 8);
+  padding: 1cm;
+
+  display: flex;
+  align-content: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 4cm;
+}
+
+footer img{
+  position:relative;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  max-height: 1.5cm;
 }
 
 h1{
@@ -73,21 +90,20 @@ h1{
   font-family: MontLight;
   font-weight: lighter;
   position: relative;
-  padding: 20px;
-  top: 50px;
+  padding: 1cm;
+  top: 2.5cm;
   height: 1000px;
 }
 
 .home-button{
+  position: relative;
   width: auto;
-  height: 60px;
+  height: 2cm;
 
   margin: 0;
   padding: 0;
   border: 0;
 
-  position: relative;
-  top: 4px;
 }
 
 .current-page{
