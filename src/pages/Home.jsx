@@ -1,13 +1,9 @@
-function Home() {
+import Navbar from "../components/Navbar";
+
+const Home = () => {
   return (
     <>
-      <header>
-        <div>
-          <a href="/"><img className="home-button" src="logo5.png" /></a>
-          <a href="https://tcdsb.elearningontario.ca/d2l/home/23924060" target="blank">D2L Page</a>
-          <a href="/projects">Projects</a>
-        </div>
-      </header>
+      <Navbar />
       <div class="main">
         <h1>Welcome to the Computer Science Club!</h1>
         <h2>
@@ -15,10 +11,12 @@ function Home() {
         </h2>
       </div>
       <footer>
-        <a href="https://github.com/flcsc/csc-website"><img src="gitHubLogo.png"></img></a>
+        <a href="https://github.com/flcsc/csc-website">
+          <img src="gitHubLogo.png"></img>
+        </a>
       </footer>
     </>
   );
-}
+};
 
 export default Home;

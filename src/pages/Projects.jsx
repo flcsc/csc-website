@@ -1,14 +1,20 @@
+import { useEffect, useState } from "react";
+import Navbar from "../components/Navbar";
+import axios from "axios";
+
 function Projects() {
+  const [projectInfo, setProjectInfo] = useState([]);
+
+  useEffect(() => {
+    axios.get("https://api.github.com/orgs/flcsc/repos").then((response) => {
+      setProjectInfo(response.data);
+    });
+  }, []);
+
   return (
     <>
-      <header>
-        <div>
-          <a href="/"><img className="home-button" src="logo5.png" /></a>
-          <a href="https://tcdsb.elearningontario.ca/d2l/home/23924060">D2L Page</a>
-          <a href="/projects" className="current-page">Projects</a>
-        </div>
-      </header>
-      <div class="main"></div>
+      <Navbar />
+      <div className="main"></div>
       <footer></footer>
     </>
   );
