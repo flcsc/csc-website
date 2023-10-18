@@ -22,9 +22,9 @@ body{
 }
 
 .main{
-  padding: 1cm;
   margin: 0;
   border: 0;
+  padding-top: 1cm;
 
   display: block;
   width: 100%;
@@ -126,15 +126,16 @@ h1{
   display: block;
 
   padding: 0.5cm;
+  margin: 0 auto;
 
-  width: 80%;
+  width: 60%;
+  min-height: 3cm;
   height:fit-content;
 
-  background-color: rgb(3, 19, 26);
-  border: 3px solid rgb(6, 48, 68);
+  border-bottom: 3px solid rgb(6, 48, 68);
 }
 
-.event h3, .event p{
+.event p{
   margin: 0;
   padding: 0;
   border: 0;
