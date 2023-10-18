@@ -5,9 +5,9 @@ import Event from "../components/Event"
 function Schedule()
 {
     var events = [
-        <Event name="NewHacks" description="Hackathon" date="Nov 4-5"/>,
-        <Event name="SkillsCanada" description="Computer coding competition" />,
-        <Event name="CanHack" description="Cybersecurity competition" date="Unknown"/>
+        <Event name="NewHacks" description="A hackathon hosted at the University of Toronto St. George campus, which will last 24-hours. Registration will close on October 29th, and there will be limited spots!" date="Nov 4-5"/>,
+        <Event name="SkillsCanada" description="A coding competition for hackers to compete to increasing regional levels." />,
+        <Event name="CanHack" description="A cybersecurity hacking competition. Consists of many 'Caputure the Flag' puzzles in which competitors must find a code (the flag) hidden using different sort of encryption at different difficulties." date="Unknown"/>
     ];
     return (
         <>

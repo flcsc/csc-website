@@ -22,15 +22,11 @@ body{
 }
 
 .main{
-  font-family: Mont, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-weight: lighter;
-
-  display: flex;
-
-  padding: 0;
+  padding: 1cm;
   margin: 0;
   border: 0;
 
+  display: block;
   width: 100%;
   min-height: 20cm;
   
@@ -59,9 +55,10 @@ header a{
   padding-left: 4px;
   padding-right: 4px;
 
+  font-family: Mont, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   text-decoration: none;
-  font-weight: bold;
   font-size: 20px;
+
   vertical-align: middle;
   color: white;
 }
@@ -98,6 +95,11 @@ footer img{
   max-height: 1.5cm;
 }
 
+h1, h2, h3{
+  font-family: Mont, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  display:block;
+}
+
 h1{
   text-align: center;
   font-size: 55px;
@@ -120,20 +122,33 @@ h1{
 }
 
 .event{
-  display: block;
   position:relative;
+  display: block;
 
-  margin: 0.5cm;
   padding: 0.5cm;
 
+  width: 80%;
   height:fit-content;
 
   background-color: rgb(3, 19, 26);
-  border: 3px solid rgb(4, 33, 46);
+  border: 3px solid rgb(6, 48, 68);
 }
 
 .event h3, .event p{
   margin: 0;
   padding: 0;
   border: 0;
+}
+
+.event h3, .event h2{
+  display: inline;
+  margin-right: 0.2cm;
+}
+
+.event h3{
+  color: rgb(6, 48, 68);
+}
+
+p{
+  font-family: MontLight, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
