@@ -12,7 +12,9 @@ function Schedule()
     return (
         <>
             <Navbar />
-            <ul>{events}</ul>;
+            <div className = "main">
+                {events}
+            </div>
             <Footer />
         </>
     )

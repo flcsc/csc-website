@@ -2,7 +2,7 @@ function Footer()
 {
     return (
         <footer>
-            <a href="https://github.com/flcsc/csc-website"><img src="../public/gitHubLogo.png"></img></a>
+            <a href="https://github.com/flcsc/csc-website"><img src="/gitHubLogo.png"></img></a>
         </footer>
     );
 }

@@ -1,11 +1,10 @@
-export default function Event(name, description, date="")
+export default function Event(props)
 {
-    return 
-    <li>
-        <h1>{name}</h1>
-        <br/>
-        <p>{description}</p>
-        <br/>
-        <p>{date}</p>
-    </li>
+    return (
+        <div key={Math.pow(3, 10*Math.random())+""} className="event">
+            <h3>{props.name}</h3>
+            <p>{props.date}</p>
+            <p>{props.description}</p>
+        </div>
+    );
 };
