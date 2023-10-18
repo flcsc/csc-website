@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import axios from "axios";
+import Footer from "../components/Footer";
 
 function Projects() {
   const [projectInfo, setProjectInfo] = useState([]);
@@ -15,7 +16,7 @@ function Projects() {
     <>
       <Navbar />
       <div className="main"></div>
-      <footer></footer>
+      <Footer />
     </>
   );
 }

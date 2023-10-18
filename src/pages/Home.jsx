@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
@@ -10,11 +11,7 @@ const Home = () => {
           This page is currently under construction. Please check back later!
         </h2>
       </div>
-      <footer>
-        <a href="https://github.com/flcsc/csc-website">
-          <img src="gitHubLogo.png"></img>
-        </a>
-      </footer>
+      <Footer />
     </>
   );
 };
