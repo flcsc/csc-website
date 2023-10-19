@@ -16,6 +16,7 @@ const Navbar = (props) => {
         <a href="/projects">Projects</a>
         <a href="/schedule">Schedule</a>
         <button className="dropDown-Button" onClick={dropDown}>Button</button>
+        
       </div>
     </header>
   );
