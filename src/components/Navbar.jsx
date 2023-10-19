@@ -1,3 +1,12 @@
+function dropDown()
+{
+  return (
+    <div className="dropDown">
+      <h1>Pooog</h1>
+    </div>
+  );
+}
+
 const Navbar = (props) => {
   return (
     <header>
@@ -6,6 +15,7 @@ const Navbar = (props) => {
         <a href="https://tcdsb.elearningontario.ca/d2l/home/23924060">D2L Page</a>
         <a href="/projects">Projects</a>
         <a href="/schedule">Schedule</a>
+        <button className="dropDown-Button" onClick={dropDown}>Button</button>
       </div>
     </header>
   );
