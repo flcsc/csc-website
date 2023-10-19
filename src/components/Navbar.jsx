@@ -1,22 +1,13 @@
-function dropDown()
-{
-  return (
-    <div className="dropDown">
-      <h1>Pooog</h1>
-    </div>
-  );
-}
+import Dropdown from "./Dropdown"
 
 const Navbar = (props) => {
+
   return (
     <header>
       <div>
         <a href="/"><img className="home-button" src="logo5.png" /></a>
-        <a href="https://tcdsb.elearningontario.ca/d2l/home/23924060" target="blank">D2L Page</a>
-        <a href="/projects">Projects</a>
-        <a href="/schedule">Schedule</a>
-        <button className="dropDown-Button" onClick={dropDown}>Button</button>
-        
+        <a href="https://tcdsb.elearningontario.ca/d2l/home/23924060">D2L Page</a>
+        <Dropdown/>
       </div>
     </header>
   );

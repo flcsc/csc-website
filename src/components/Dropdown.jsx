@@ -1,28 +1,42 @@
-class DropdownButton extends React.Component
+import React from "react"
+
+class Dropdown extends React.Component
 {
     dropped = false;
     constructor(props)
     {
         super(props);
         this.state = {dropped: false};
+        this.buttonClicked = this.buttonClicked.bind(this);
     }
 
-    buttonClicked(state)
+    buttonClicked()
     {
-        this.setState({dropped: !state.dropped});
+        this.setState({dropped: (((this.state.dropped) ? false: true))});
     }
 
     render()
     {
-        if(this.dropped)
+        if(this.state.dropped)
         {
             return (
-                <div className="dropDown">
-                    <h1>Dropped</h1>
-                </div>
+                <>
+                    <img src="dropdown_button.png" className="dropdown-button" onClick={this.buttonClicked}></img>
+                    <div className="dropDown">
+                        <a href="/projects">Projects</a>
+                        <a href="/schedule">Schedule</a>
+                    </div>
+                </>
             );
         }else{
-            return null;
+            return (
+                <>
+                    <img src="dropdown_button.png" className="dropdown-button" onClick={this.buttonClicked}></img>
+                </>
+            )
         }
+        
     }
-};
+}
+
+export default Dropdown;
