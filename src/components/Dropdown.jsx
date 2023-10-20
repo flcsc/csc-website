@@ -22,9 +22,11 @@ class Dropdown extends React.Component
             return (
                 <>
                     <img src="dropdown_button.png" className="dropdown-button" onClick={this.buttonClicked}></img>
-                    <div className="dropDown">
+                    <div className="dropdown">
+                        <a href="/">Home</a>
                         <a href="/projects">Projects</a>
                         <a href="/schedule">Schedule</a>
+                        <a href="https://tcdsb.elearningontario.ca/d2l/home/23924060" target="blank">D2L Page</a>
                     </div>
                 </>
             );
