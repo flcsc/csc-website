@@ -24,8 +24,7 @@ body{
 .main{
   margin: 0;
   border: 0;
-  padding: 0;
-  padding-top: 1cm;
+  padding: 1cm 0;
 
   display: block;
   width: 100vw;
@@ -87,23 +86,26 @@ footer{
   border:0;
   margin:0;
   border-top: 0.2cm solid rgb(1, 6, 8);
-  padding: 0.5cm;
+  padding: 0;
 
-  display: block;
+  display: flex;
 
   width: 100vw;
-  height: 2cm;
+  height: 3cm;
 
   position:relative;
 }
 
-footer img{
+footer a, footer img{
   position:relative;
   display: block;
+
   border: 0;
   padding: 0;
-  margin: 0 auto;
-  max-width: fit-content;
+  margin: auto auto;
+
+  width: fit-content;
+  height: fit-content;
   max-height: 1.5cm;
 }
 
@@ -147,22 +149,28 @@ h1{
   height: 100%;
   max-height:fit-content;
 
-  border-bottom: 3px solid rgb(6, 48, 68);
+  border-bottom: 3px solid rgb(4, 44, 39);
 }
 
 .event p{
   margin: 0;
   padding: 0;
   border: 0;
+
+  font-size: 0.8cm;
+
+  max-width: 90%;;
 }
 
 .event h3, .event h2{
   display: inline;
+  font-size: 0.8cm;
   margin-right: 0.2cm;
 }
 
 .event h3{
-  color: rgb(6, 48, 68);
+  color: rgb(4, 44, 39);
+  font-size: 0.6cm;
 }
 
 p{
@@ -177,7 +185,7 @@ p{
   position: fixed;
   top: 2.5cm;
   right: 0cm;
-  z-index: -5;
+  z-index: 3;
 
   width: 40vh;
   height: 100vh;
@@ -203,4 +211,17 @@ p{
   max-height: 1.5cm;
   margin: 0.5cm 0.8cm;
   float:right;
+}
+
+.page_Overlay{
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  z-index: 2;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba(0, 0, 0, 0.3);
 }

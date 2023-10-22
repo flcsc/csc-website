@@ -1,0 +1,15 @@
+{
+    "events" : [
+        {
+            "name":"Hack the Valley 9",
+            "description":"A hackathon that hates Noah Miguel Perez specifically",
+            "date":"IDK IDC"
+        },
+        {
+            "name":"CanHack",
+            "description":"Cybersecurity hacking competition",
+            "date": "Unknown"
+        }
+    ]
+    
+}

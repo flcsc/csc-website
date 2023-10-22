@@ -1,9 +1,17 @@
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import Event from "../components/Event"
+import "../data/events.json"
+
+function getSchedule()
+{
+    let events = fetch("/src/data/events.json").then((result) => result.json()).finally((res)=> res);
+    console.log(events);
+}
 
 function Schedule()
 {
+    getSchedule();
     var events = [
         <Event name="NewHacks" description="A hackathon hosted at the University of Toronto St. George campus, which will last 24-hours. Registration will close on October 29th, and there will be limited spots!" date="Nov 4-5"/>,
         <Event name="SkillsCanada" description="A coding competition for hackers to compete to increasing regional levels." />,
