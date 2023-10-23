@@ -9,6 +9,11 @@
             "name":"CanHack",
             "description":"Cybersecurity hacking competition",
             "date": "Unknown"
+        },
+        {
+            "name":"Beaver Computing Contest",
+            "description":"A computer science competition focused on logical thinking. It is composed of thinking multiple-choice questions instead of questions in which one would write code.",
+            "date":"IDK styll"
         }
     ]
     
