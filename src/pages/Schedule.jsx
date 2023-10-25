@@ -14,15 +14,14 @@ class Schedule extends React.Component{
 
     componentDidMount()
     {
-        if(this.state.events.length !== 0) return; 
-        console.log("Component did mount. Length: " + this.state.events.length)
+        if(this.state.events.length !== 0) return;
 
         fetch("/src/data/events.json")
         .then(result => result.json(), console.error())
         .then((data) =>
         {
             var loadedEvents = [];
-            data.events.forEach(event => loadedEvents.push(<Event name={event.name} description={event.description} date={event.date}/>))
+            data.events.forEach(event => loadedEvents.push(<Event name={event.name} description={event.description} date={event.date} image={event.image} link={event.link}/>))
             this.setState({events: loadedEvents});
         }, console.error());
 
@@ -53,7 +52,9 @@ class Schedule extends React.Component{
             <>
                 <Navbar />
                 <div className = "main">
-                    {this.state.events}
+                    <div className="events">
+                        {this.state.events}
+                    </div>  
                 </div>
                 <Footer />
             </>

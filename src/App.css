@@ -11,6 +11,10 @@
   src: url("/src/fonts/Mont-HeavyDEMO.otf") format("opentype");
 }
 
+body::-webkit-scrollbar{
+  display: none;
+}
+
 body{
   margin:0;
   padding:0;
@@ -23,16 +27,16 @@ body{
 
 .main{
   margin: 0;
+  margin-top: 2.5cm;
   border: 0;
   padding: 1cm 0;
 
   display: block;
   width: 100vw;
-  top: 2cm;
+
   min-height: 100vh;
   height: fit-content;
   position: relative;
-  
 
   background-color: rgb(12, 65, 58);
   color: rgb(223, 243, 255);
@@ -82,6 +86,7 @@ header div{
 }
 
 footer{
+  position:relative;
   background-color: rgb(3, 10, 15);
   border:0;
   margin:0;
@@ -146,31 +151,92 @@ h1{
   margin: 0 auto;
 
   width: 60vw;
-  height: 100%;
-  max-height:fit-content;
+  height:4cm;
 
   border-bottom: 3px solid rgb(4, 44, 39);
+  background-color: rgb(12, 65, 58);
+  overflow:hidden;
 }
 
-.event p{
+.event:hover{
+  position:relative;
+  display: block;
+
+  padding: 0.5cm;
+  margin: 0 auto;
+
+  width: 60vw;
+  height:4cm;
+
+  border-bottom: 3px solid rgb(4, 44, 39);
+  background-color: rgb(9, 53, 47);
+  overflow:hidden;
+}
+
+.event_dropped{
+  position:relative;
+  display: block;
+
+  padding: 0.5cm;
+  margin: 0 auto;
+
+  width: 60vw;
+  height: fit-content;
+  overflow: visible;
+
+  border-bottom: 3px solid rgb(4, 44, 39);
+  background-color: rgb(9, 53, 47);
+}
+
+.events{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  height: fit-content;
+}
+
+.events p{
   margin: 0;
   padding: 0;
   border: 0;
 
   font-size: 0.8cm;
 
-  max-width: 90%;;
+  max-width: 90%;
 }
 
-.event h3, .event h2{
+.events h3, .events h2{
   display: inline;
   font-size: 0.8cm;
   margin-right: 0.2cm;
 }
 
-.event h3{
+.events h3{
   color: rgb(4, 44, 39);
   font-size: 0.6cm;
+}
+
+.event_image
+{
+  max-width: 80%;
+  width:fit-content;
+  height: auto;
+  display:block;
+
+  margin: 0.5cm auto;
+  border: 3px solid rgb(4, 44, 39);
+}
+
+.link_image
+{
+  display: inline-block;
+  position:relative;
+  border: 0;
+  margin: 0;
+  padding: 0;
+
+  width: 1cm;
+  height: auto;
 }
 
 p{

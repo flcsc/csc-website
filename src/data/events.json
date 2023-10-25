@@ -3,17 +3,30 @@
         {
             "name":"Hack the Valley 9",
             "description":"A hackathon that hates Noah Miguel Perez specifically",
-            "date":"IDK IDC"
+            "date":"IDK IDC",
+            "image":"",
+            "link":""
         },
         {
             "name":"CanHack",
             "description":"Cybersecurity hacking competition",
-            "date": "Unknown"
+            "date": "Unknown",
+            "image":"",
+            "link":""
         },
         {
             "name":"Beaver Computing Contest",
             "description":"A computer science competition focused on logical thinking. It is composed of thinking multiple-choice questions instead of questions in which one would write code.",
-            "date":"IDK styll"
+            "date":"IDK styll",
+            "image":"",
+            "link":""
+        },
+        {
+            "name":"Beaver Computing Contest with Photo",
+            "description":"A computer science competition focused on logical thinking. It is composed of thinking multiple-choice questions instead of questions in which one would write code.",
+            "date":"IDK styll",
+            "image":"https://dmz.ryerson.ca/wp-content/uploads/2020/07/rsz_2019_canhack.jpg",
+            "link":"https://cemc.uwaterloo.ca/contests/bcc.html#:~:text=The%20BCC%20is%20a%20problem-solving%20contest%20with%20a,described%20in%20the%20solutions%20to%20all%20past%20contests."
         }
     ]
     
