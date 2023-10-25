@@ -21,9 +21,11 @@ class Schedule extends React.Component{
         .then(result => result.json(), console.error())
         .then((data) =>
         {
-            data.events.forEach(event => this.state.events.push(<Event name={event.name} description={event.description} date={event.date}/>))
-            this.setState({events: this.state.events});
+            var loadedEvents = [];
+            data.events.forEach(event => loadedEvents.push(<Event name={event.name} description={event.description} date={event.date}/>))
+            this.setState({events: loadedEvents});
         }, console.error());
+
     }
 
     componentWillUnmount()
