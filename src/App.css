@@ -155,6 +155,7 @@ h1{
 
   border-bottom: 3px solid rgb(4, 44, 39);
   background-color: rgb(12, 65, 58);
+  
   overflow:hidden;
 }
 
@@ -181,6 +182,7 @@ h1{
   margin: 0 auto;
 
   width: 60vw;
+  min-height: 4cm;
   height: fit-content;
   overflow: visible;
 
@@ -268,6 +270,17 @@ p{
   font-size: 0.9cm;
 
   margin: 0.5cm auto;
+}
+
+.dropdown a:hover{
+  position:relative;
+  display:block;
+
+  width: fit-content;
+  font-size: 0.9cm;
+
+  margin: 0.5cm auto;
+  background-color: rgb(7, 29, 7);
 }
 
 .dropdown-button{
