@@ -1,23 +1,65 @@
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import Event from "../components/Event"
+import React from "react"
 
-function Schedule()
-{
-    var events = [
-        <Event name="NewHacks" description="A hackathon hosted at the University of Toronto St. George campus, which will last 24-hours. Registration will close on October 29th, and there will be limited spots!" date="Nov 4-5"/>,
-        <Event name="SkillsCanada" description="A coding competition for hackers to compete to increasing regional levels." />,
-        <Event name="CanHack" description="A cybersecurity hacking competition. Consists of many 'Caputure the Flag' puzzles in which competitors must find a code (the flag) hidden using different sort of encryption at different difficulties." date="Unknown"/>
-    ];
-    return (
-        <>
-            <Navbar />
-            <div className = "main">
-                {events}
-            </div>
-            <Footer />
-        </>
-    )
+class Schedule extends React.Component{
+    events = [];
+
+    constructor(props)
+    {
+        super(props);
+        this.state = {events:props.events};
+    }
+
+    componentDidMount()
+    {
+        if(this.state.events.length !== 0) return;
+
+        fetch("/src/data/events.json")
+        .then(result => result.json(), console.error())
+        .then((data) =>
+        {
+            var loadedEvents = [];
+            data.events.forEach(event => loadedEvents.push(<Event name={event.name} description={event.description} date={event.date} image={event.image} link={event.link}/>))
+            this.setState({events: loadedEvents});
+        }, console.error());
+
+    }
+
+    componentWillUnmount()
+    {
+        for(let i = 0; i < this.state.events.length; i++)
+            this.state.events[i] = null;
+    }
+
+    render()
+    {
+        if(this.state.events.length === 0)
+        {
+            return(
+                <>
+                    <Navbar/>
+                    <div className="main">
+                        <h1>There are no scheduled events (just yet)!</h1>
+                    </div>
+                    <Footer/>
+                </>
+            )
+        }
+
+        return (
+            <>
+                <Navbar />
+                <div className = "main">
+                    <div className="events">
+                        {this.state.events}
+                    </div>  
+                </div>
+                <Footer />
+            </>
+        );
+    }
 }
 
 export default Schedule;

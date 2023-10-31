@@ -11,6 +11,10 @@
   src: url("/src/fonts/Mont-HeavyDEMO.otf") format("opentype");
 }
 
+body::-webkit-scrollbar{
+  display: none;
+}
+
 body{
   margin:0;
   padding:0;
@@ -23,30 +27,41 @@ body{
 
 .main{
   margin: 0;
+  margin-top: 2.5cm;
   border: 0;
-  padding-top: 1cm;
+  padding: 1cm 0;
 
   display: block;
-  width: 100%;
-  min-height: 100vh;
-  
-  position: relative;
-  top: 2.5cm;
+  width: 100vw;
 
-  background-color: rgb(5, 24, 32);
-  color: white;
+  min-height: 100vh;
+  height: fit-content;
+  position: relative;
+
+  background-color: rgb(12, 65, 58);
+  color: rgb(223, 243, 255);
+}
+
+.main p{
+  display: block;
+  width: 70vw;
+  height: fit-content;
+  
+  margin: 0 auto;
+  
+  font-size: 0.8cm;
 }
 
 header{
-  background-color: rgb(11, 43, 11);
-  border-bottom: 4px solid rgb(31, 117, 31);
+  background-color: rgb(31, 117, 31);
+  border-bottom: 4px solid rgb(11, 43, 11);
   color: white;
 
   height: 2.5cm;
   width: 100%;
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 3;
   
 }
 
@@ -71,38 +86,44 @@ header div{
 }
 
 footer{
+  position:relative;
   background-color: rgb(3, 10, 15);
   border:0;
   margin:0;
   border-top: 0.2cm solid rgb(1, 6, 8);
-  padding: 0.5cm;
+  padding: 0;
 
   display: flex;
-  align-content: center;
-  justify-content: center;
 
-  width: 100%;
-  height: 2cm;
+  width: 100vw;
+  height: 3cm;
 
   position:relative;
-  bottom: 0px;
 }
 
-footer img{
+footer a, footer img{
   position:relative;
+  display: block;
+
   border: 0;
   padding: 0;
-  margin: 0;
+  margin: auto auto;
+
+  width: fit-content;
+  height: fit-content;
   max-height: 1.5cm;
 }
 
 h1, h2, h3{
   font-family: Mont, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   display:block;
+  width: fit-content;
+  margin: 0.5cm auto;
 }
 
 h1{
   text-align: center;
+  margin: 0 auto;
   font-size: 55px;
   margin-bottom: -5px;
 }
@@ -129,49 +150,157 @@ h1{
   padding: 0.5cm;
   margin: 0 auto;
 
-  width: 60%;
-  min-height: 3cm;
-  height:fit-content;
+  width: 60vw;
+  height:4cm;
 
-  border-bottom: 3px solid rgb(6, 48, 68);
+  border-bottom: 3px solid rgb(4, 44, 39);
+  background-color: rgb(12, 65, 58);
+  
+  overflow:hidden;
 }
 
-.event p{
+.event:hover{
+  position:relative;
+  display: block;
+
+  padding: 0.5cm;
+  margin: 0 auto;
+
+  width: 60vw;
+  height:4cm;
+
+  border-bottom: 3px solid rgb(4, 44, 39);
+  background-color: rgb(9, 53, 47);
+  overflow:hidden;
+}
+
+.event_dropped{
+  position:relative;
+  display: block;
+
+  padding: 0.5cm;
+  margin: 0 auto;
+
+  width: 60vw;
+  min-height: 4cm;
+  height: fit-content;
+  overflow: visible;
+
+  border-bottom: 3px solid rgb(4, 44, 39);
+  background-color: rgb(9, 53, 47);
+}
+
+.events{
   margin: 0;
   padding: 0;
   border: 0;
+  height: fit-content;
 }
 
-.event h3, .event h2{
+.events p{
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+  font-size: 0.8cm;
+
+  max-width: 90%;
+}
+
+.events h3, .events h2{
   display: inline;
+  font-size: 0.8cm;
   margin-right: 0.2cm;
 }
 
-.event h3{
-  color: rgb(6, 48, 68);
+.events h3{
+  color: rgb(4, 44, 39);
+  font-size: 0.6cm;
+}
+
+.event_image
+{
+  max-width: 80%;
+  width:fit-content;
+  height: auto;
+  display:block;
+
+  margin: 0.5cm auto;
+  border: 3px solid rgb(4, 44, 39);
+}
+
+.link_image
+{
+  display: inline-block;
+  position:relative;
+  border: 0;
+  margin: 0;
+  padding: 0;
+
+  width: 1cm;
+  height: auto;
 }
 
 p{
   font-family: MontLight, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.dropDown{
+.dropdown{
   margin: 0;
   padding: 0;
   border: 0;
 
-  position: absolute;
+  position: fixed;
   top: 2.5cm;
-  left: 0cm;
+  right: 0cm;
   z-index: 3;
 
-  width: 30vh;
+  width: 40vh;
   height: 100vh;
 
   background-color: rgb(11, 43, 11);
-
+  display:block;
 }
 
-.dropDown-Button{
-  float: right;
+.dropdown a{
+  position:relative;
+  display:block;
+
+  width: fit-content;
+  font-size: 0.9cm;
+
+  margin: 0.5cm auto;
+}
+
+.dropdown a:hover{
+  position:relative;
+  display:block;
+
+  width: fit-content;
+  font-size: 0.9cm;
+
+  margin: 0.5cm auto;
+  background-color: rgb(7, 29, 7);
+}
+
+.dropdown-button{
+  z-index: 5;
+  position: relative;
+  max-width: 1.5cm;
+  max-height: 1.5cm;
+  margin: 0.5cm 0.8cm;
+  float:right;
+}
+
+.page_Overlay{
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  z-index: 2;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba(0, 0, 0, 0.3);
 }
