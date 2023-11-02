@@ -15,7 +15,15 @@ function Projects() {
   return (
     <>
       <Navbar />
-      <div className="main"></div>
+      <div className="main">
+        {projectInfo.map((project) => (
+          <div className="project-card" key={project.id}>
+            <a href={project.html_url}><h3><u>{project.full_name}</u></h3></a>
+            <p>{project.description}</p>
+            <p>Last updated: {project.updated_at}</p>
+          </div>
+        ))}
+      </div>
       <Footer />
     </>
   );
